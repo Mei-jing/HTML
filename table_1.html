@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>表格</title>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+	</head>
+	<body>
+		<!--创建五行五列的表格-->
+		<table border="1" width="500px" bgcolor="#f2f2f2" cellpadding="5",cellspacing="5" align="center" frame="lhs" rules="rows">
+			<!--table 表格属性-->
+			<!--border  pixels % 规定表格边框的宽度-->
+			<!--align left,center,right 表格相对于周围元素的对齐方式-->
+			<!--width pixels % 规定表格边框的宽度-->
+			<!--bgcolor rgb(x,x,x),#xxxxx,colorname 表格的背景颜色-->
+			<!--cellpadding pixels %  单元边缘与其内容的空白-->
+			<!--cellspacing pixels %  单元格之间的空白-->
+			<!--frame 属性值 规定外侧边框哪个部分是可见的--><!--s属性值可查询，下同-->
+			<!--rules 属性值 规定内侧边框的哪个部分是可见的-->
+
+			<caption>成绩统计</caption><!--表格标题，居中显示-->
+
+		<thead><!--thead,tbody,tfoot不影响表格布局，仅作结构区分-->
+
+			<tr><!--行标签-->
+				<!-- tr标签属性-->
+				<!-- align left,center,right,justify,char 行内容的水平对齐-->
+				<!-- valign top,middle,bottom,baseline 行内容的垂直对齐-->
+				<!-- bgcolor colorname,#xxxxx.#rgb(x,x,x)-->
+
+				<th align="right" valign="top" bgcolor="red" width="100px" height="50px" rowspan="2">姓名</th><!--th：表格头内容居中，加粗显示-->
+				<th colspan="2">2016</th><!--跨列合并-->
+				<th rowspan="2">2017</th><!--跨行合并-->
+				<th rowspan="2">2018</th>
+
+				<!--td 和 th 标签属性-->
+				<!--align，valign,bgcolor,width,height 值和描述同上-->
+			</tr>
+			<tr><!--行标签-->
+				<th>上半年</th><!--多个列标签-->
+				<th>下半年</th><!--多个列标签-->
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>小李</td>
+				<td>良</td>
+				<td>良+</td><!--多个列标签-->
+				<td>中</td>
+				<td>优</td>
+			</tr>
+			<tr>
+				<td>小王</td>
+				<td>良</td>
+				<td>差</td><!--多个列标签-->
+				<td>中</td>
+				<td>优</td>
+			</tr>
+		</tbody>
+		<tfoot align="center" valign="middle">
+			<tr>
+				<td>核查人</td>
+				<td>梅老师</td>
+				<td>兰老师</td>
+				<td>竹老师</td>
+				<td>菊老师</td>
+			</tr>
+		</tfoot>
+		<!-- thead,tbody,tfoot 标签属性-->
+		<!-- align left,center,right,justify,char 内容水平对齐-->
+		<!-- valign top,middle,bottom,baseline 内容垂直对齐-->
+			
+		</table>
+	<a a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Tables" target="_black"><h1>HTML表格 MDN 文档</h1></a>
+			<!--表格嵌套--》
+				<!--1,完整表格结构。2，放在td标签内-->
+	</body>
+</html>
