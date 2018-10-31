@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="html/text" charset="utf-8"/>
+	<title>表单</title>
+</head>
+<body>
+	<h1 align="center">注册信息</h1>
+	<hr color="#336699"/>
+<form>
+	<table align="center" width="600px" bgcolor="#f2f2f2">
+		<tr>
+			<td>姓名：</td>
+			<td><input type="text" name="username" size="25" maxlength="6"/></td>
+		</tr><!--应设置 name 值，使数据易区分-->
+		<tr>
+			<td>邮箱：</td>
+			<td><input type="text" name="email" value="@gmail" size="25" maxlength="6"/></td>
+		</tr>
+		<tr>
+			<td>密码：</td>
+			<td><input type="password" name="password" size="25" maxlength="6" placeholder="请输入密码"/></td>
+		</tr>
+		<tr>
+			<td>确认密码：</td>
+			<td><input type="password" name="password_confirm" size="25" maxlength0="6" placeholder="请再输入密码"/></td>
+		</tr>
+		<tr>
+			<td>上传照片：</td>
+			<td><input type="file" name="file"/></td>
+		</tr>
+		<tr>
+			<td>性别：</td>
+			<td>男<input type="radio" name="sex" value="man"/>
+				女<input type="radio" name="sex" value="women"/>
+				保密<input type="radio" name="sex" value="secret"/><!--value 才是传送到服务器的值-->
+			</td>
+		</tr>
+		<tr>
+			<td>爱好：</td>
+			<td>读书<input type="checkbox" name="read" value="read"/>
+				唱歌<input type="checkbox" name="dance" value="dance"/>
+				跳舞<input type="checkbox" name="sing" value="sing"/>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="button" name="button" value="来点我"/>
+				<input type="submit" name="submit" value="提交"/>
+				<input type="reset" name="reset" value="重置">
+				<input type="image" name="image_button" src="img/image-button.png"/>
+			</td>
+			<td><input type="hidden" name="hidden" value="这是一条用户注册信息"/>
+				
+			</td>
+		</tr>
+		<tr>
+			<td>城市：</td>
+			<td>
+				<select name="city" multiple>
+				<!--select 标签属性-->
+				<!--name 设置下来菜单和名称-->
+				<!--multiple 设置可选择多个选项-->
+				<!--size 设置列表中可见选项额数目-->
+					<option value="xuanze">--请选择--</option>
+					<option value="beijing" ">北京</option><!--value 才是传送到服务器的值,北京字样仅作展示作用-->
+					<option value="shanghai" selected="shanghai">上海</option>
+					<option value="shenzhen">深圳</option>
+					<option value="hangzhou">杭州</option>
+					<option value="chengdu">成都</option>
+				</select>
+				<select name="city" size="2" multiple>
+					<option value="beijing">北京</option><!--value 才是传送到服务器的值,北京字样仅作展示作用-->
+					<option value="shanghai">上海</option>
+					<option value="shenzhen">深圳</option>
+					<option value="hangzhou">杭州</option>
+					<option value="chengdu">成都</option>
+					<!--option 标签属性-->
+					<!--selected 设置选项初始选中状态-->
+					<!--value 定义送往服务器的选项值-->
+				</select>
+			</td>
+		</tr>
+	</table>
+</form>
+
+</body>
+</html>
+<!--单行文本域-->
+<!--name 文本域的名称-->
+<!--maxlength 用户输入的最大字符长度-->
+<!--size 指定文本框的宽度，以字符个数为单位，文本框的缺省宽度是20个字符-->
+<!--value 指定文本框的默认值-->
+<!--placeholder 规定用户填写输入字段的提示-->
