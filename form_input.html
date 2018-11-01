@@ -8,64 +8,55 @@
 <body>
 	<h1 align="center">注册信息</h1>
 	<hr color="#336699"/>
-<form>
+<form action="action.php" method="post" target="_black">
+	<!--get 使用URL传递参数，对所发送信息的数量也有限制，一般用于信息获取-->
+	<!--post 表单数据作为HTTP请求体的一部分，对所发送信息的数量无限制，一般用于修改服务器上的资源-->
 	<table align="center" width="600px" bgcolor="#f2f2f2">
 		<tr>
-			<td>姓名：</td>
-			<td><input type="text" name="username" size="25" maxlength="6"/></td>
+			<td align="right">姓名：</td>
+			<td align="left"><input type="text" name="username" size="25" maxlength="6"/></td>
 		</tr><!--应设置 name 值，使数据易区分-->
 		<tr>
-			<td>邮箱：</td>
-			<td><input type="text" name="email" value="@gmail" size="25" maxlength="6"/></td>
+			<td align="right">邮箱：</td>
+			<td align="left"><input type="text" name="email" value="@gmail.com" size="25" maxlength="6"/></td>
 		</tr>
 		<tr>
-			<td>密码：</td>
-			<td><input type="password" name="password" size="25" maxlength="6" placeholder="请输入密码"/></td>
+			<td align="right">密码：</td>
+			<td align="left"><input type="password" name="password" size="25" maxlength="6" placeholder="请输入密码"/></td>
 		</tr>
 		<tr>
-			<td>确认密码：</td>
-			<td><input type="password" name="password_confirm" size="25" maxlength0="6" placeholder="请再输入密码"/></td>
+			<td align="right">确认密码：</td>
+			<td align="left"><input type="password" name="password_confirm" size="25" maxlength0="6" placeholder="请再输入密码"/></td>
 		</tr>
 		<tr>
-			<td>上传照片：</td>
-			<td><input type="file" name="file"/></td>
+			<td align="right">上传照片：</td>
+			<td align="left"><input type="file" name="file"/></td>
 		</tr>
 		<tr>
-			<td>性别：</td>
-			<td>男<input type="radio" name="sex" value="man"/>
+			<td align="right">性别：</td>
+			<td align="left">男<input type="radio" name="sex" value="man"/>
 				女<input type="radio" name="sex" value="women"/>
-				保密<input type="radio" name="sex" value="secret"/><!--value 才是传送到服务器的值-->
+				保密<input type="radio" name="sex" value="secret" checked="" /><!--value 才是传送到服务器的值-->
 			</td>
 		</tr>
 		<tr>
-			<td>爱好：</td>
-			<td>读书<input type="checkbox" name="read" value="read"/>
+			<td align="right">爱好：</td>
+			<td align="left">读书<input type="checkbox" name="read" value="read" checked />
 				唱歌<input type="checkbox" name="dance" value="dance"/>
 				跳舞<input type="checkbox" name="sing" value="sing"/>
 			</td>
 		</tr>
 		<tr>
-			<td></td>
-			<td><input type="button" name="button" value="来点我"/>
-				<input type="submit" name="submit" value="提交"/>
-				<input type="reset" name="reset" value="重置">
-				<input type="image" name="image_button" src="img/image-button.png"/>
-			</td>
-			<td><input type="hidden" name="hidden" value="这是一条用户注册信息"/>
-				
-			</td>
-		</tr>
-		<tr>
-			<td>城市：</td>
-			<td>
-				<select name="city" multiple>
+			<td align="right">城市：</td>
+			<td align="left">
+				<select name="city" >
 				<!--select 标签属性-->
 				<!--name 设置下来菜单和名称-->
 				<!--multiple 设置可选择多个选项-->
 				<!--size 设置列表中可见选项额数目-->
 					<option value="xuanze">--请选择--</option>
 					<option value="beijing" ">北京</option><!--value 才是传送到服务器的值,北京字样仅作展示作用-->
-					<option value="shanghai" selected="shanghai">上海</option>
+					<option value="shanghai" selected="">上海</option>
 					<option value="shenzhen">深圳</option>
 					<option value="hangzhou">杭州</option>
 					<option value="chengdu">成都</option>
@@ -80,6 +71,34 @@
 					<!--selected 设置选项初始选中状态-->
 					<!--value 定义送往服务器的选项值-->
 				</select>
+				<select name="city" multiple>
+					<option selected="">--请选择--</option>
+				<optgroup label="上">
+					<option value="beijing" ">北京</option>
+				</optgroup>
+				<optgroup label="中">
+					<option value="shanghai" selected="">上海</option>
+					<option value="shenzhen">深圳</option>
+					<option value="hangzhou">杭州</option>
+				</optgroup>
+				<optgroup label="下">
+					<option value="chengdu">成都</option>
+				</optgroup>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td align="right">个人介绍:</td>
+			<td align="left"><textarea name="简介" rows="6" cols="50" placeholder="请输入个人简介"></textarea></td><!--cols 设置文本区内的可见宽度-->
+		</tr>
+		<tr>
+			<td colspan="2" align="center"><input type="button" name="button" value="来点我"/>
+				<input type="submit" name="submit" value="提交"/>
+				<input type="reset" name="reset" value="重置">
+				<input type="image" name="image_button" src="img/image-button.png"/>
+			</td>
+			<td><input type="hidden" name="hidden" value="这是一条用户注册信息"/>
+				
 			</td>
 		</tr>
 	</table>
@@ -93,3 +112,13 @@
 <!--size 指定文本框的宽度，以字符个数为单位，文本框的缺省宽度是20个字符-->
 <!--value 指定文本框的默认值-->
 <!--placeholder 规定用户填写输入字段的提示-->
+
+
+
+
+<!--form 标签属性-->
+<!--action url 提交表单时向何处发送表单数据-->
+<!--method get/post 设置表单以何种方式发送到指定页面-->
+<!--name form_name 表单的名称 -->
+<!--target _black/_self/_parent/_top  在何处打开 action URL-->
+<!--enctype application/x-www-form-urlencoded multipart/form-data text/plaic 在发送表单数据之前如何对其进行编码-->
