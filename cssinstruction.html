@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css使用方法</title>
+	<style type="text/css">
+		@import url(cssexternalstyle.css);
+	</style>
+	<!--外部样式-->
+	<!-- 
+		<link rel="stylesheet" type="text/css" href="cssexternalstyle.css"> 
+	--> 
+	<!--
+	<style type="text/css">
+		p，h1{font-size: 30px}
+		p{color: blue;}
+		h1{color: red}  /*嵌入样式*/
+	</style> 
+	-->
+</head>
+<body>
+	<!--行内样式-->
+	<h1 style="color: red;font-size:20px; ">css使用方法</h1>
+
+	<!--嵌入样式-->
+	<h2>css使用方法</h2>
+	<p>行内样式</p>
+	<p>嵌入样式</p>
+	<p>外部样式</p>
+	<p>导入样式</p>
+</body>
+</html>
+<!--行内样式--><!-- 开始标签内style --><!-- html文件内 -->
+<!-- 内部样式 <head>中<style>内  html文件内 -->
+<!-- 链入外部样式 <head>中<link>引用 css样式文件和html文件分离 --> 
+<!-- 导入式 <head>中<style>内 css样式节HTML文件分离 -->
+	<!--常用链入外部样式-->
+<!-- 行内样式>内部样式>外部样式  -->
+<!-- 外部样式依据 *就近原则*  -->
