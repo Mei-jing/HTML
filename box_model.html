@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>高宽属性</title>
+	<style type="text/css">
+		/*div{background-color: #acacac;width: 600px;}*/
+		/*p{background-color: #ececec;width: 400px;}
+		.one{max-width: 500px;}
+		.two{min-width: 500px;}
+		.three{min-width: 500px;max-width: 300px;}*/
+
+		p{background-color: #ececec;height: auto;width: 200px;}
+		span{background-color: #acacac;width: 200px;height: 100;}
+		img{width:200px;height: 100px;}
+	</style>
+</head>
+<body>
+	<div>
+		<p>盒子模型高度height宽度width</p>
+		<span>盒子模型高度height宽度width</span>
+		<!-- 高宽属性只适用于块元素和替换元素 -->
+		<img src="img/1.jpg" width="200px"/><img src="img/2.jpg" height="100px"/><!--优先显示 CSS 样式-->
+
+		<!-- <p>盒子模型宽度width:400px；</p>
+		<p class="one">盒子模型最大宽度max-width:500px;</p>
+		<p class="two">盒子模型最小宽度min-width:500px;</p> -->
+	</div>
+	
+</body>
+</html>
+
+<!-- height和width属性总结 -->
+<!-- 1.width和height属性设置是内容的高和宽 -->
+<!-- 2.只对块级元素和替换元素有效 -->
