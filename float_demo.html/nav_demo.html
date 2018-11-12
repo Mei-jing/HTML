@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>nav_demo</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			list-style:none;
+		}
+		a{
+			text-decoration:none;
+		}
+		.container{
+			width: 1200px;
+			margin: 0 auto;
+		}
+		.header{
+			width: 1200px;
+			background: #ccc;
+		}
+		.header::after{
+			content: ".";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+		.header .logo{
+			width: 120px;
+			height: 44px;
+			float: left;
+			margin: 0 80px;
+		}
+		.header .nav{
+			float: right;
+			padding-right: 80px;
+		}
+		.header .nav::after{
+			content:"";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+		.header .nav li{
+			float: left;
+			margin-right: 20px;
+		}
+		.header .nav li a{
+			padding: 0 20px;
+			height: 44px;
+			line-height: 44px;
+			display: block;
+			font-family: "微软雅黑"
+			font-size:16px;
+			color: #333;
+		}
+		.header .nav li a:hover{
+			color:#fff;
+		}
+		.main{
+			width: 1200px;
+		}
+		.main::after{
+			content: "";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+		.main .content{
+			width: 1000px;
+			height: 500px;
+			background: blue;
+			float: left;
+		}
+		.main .sidebar{
+			width: 200px;
+			height: 500px;
+			background: yellow;
+			float: left;
+		}
+		.footer{
+			width: 1200px;
+			height: 100px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<div class="logo">
+				<a href="#"><img src="../img/google.jpg" alt=""></a>
+			</div>
+			<ul class="nav">
+				<li><a href="#">导航</a></li>
+				<li><a href="#">导航</a></li>
+				<li><a href="#">导航</a></li>
+				<li><a href="#">导航</a></li>
+				<li><a href="#">导航</a></li>
+			</ul>
+		</div>
+			<div class="main">
+				<div class="content">content	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, sit aliquam dolorem autem accusamus tempore voluptatem omnis libero sed cumque distinctio natus odit alias nulla porro, corporis, molestiae itaque iste.</div>
+				<div class="sidebar">sidebar	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse dolore ex veritatis quisquam! Vel quae consequuntur cum voluptate debitis sed obcaecati adipisci, ipsam voluptatibus impedit eligendi porro pariatur reiciendis commodi.</div>
+			</div>
+		<div class="footer">footer    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, aut id at cum architecto. Libero quasi maiores ex officiis laborum quam, distinctio magnam quidem iure velit. Commodi, magnam quis deleniti?</div>
+	</div>
+</body>
+</html>
